@@ -2,6 +2,7 @@ package obemescode.com;
 
 import java.util.HashMap;
 
+// Using Inheritance
 public class Contacts extends Main {
     private String name;
     private String phoneNumber;
@@ -10,6 +11,7 @@ public class Contacts extends Main {
 
     }
 
+    // Creating a HashMap for storing the name and phoneNumber of a person
     HashMap<String, String> phoneBook = new HashMap<>();
 
     public Contacts(String name, String phoneNumber) {

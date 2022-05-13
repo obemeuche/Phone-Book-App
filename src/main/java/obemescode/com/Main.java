@@ -6,8 +6,11 @@ import java.util.Scanner;
 
 public class Main {
 
+
+    // Instantiating the contact class
     public static Contacts contact = new Contacts();
 
+    // Requiring user input
     public static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
@@ -18,6 +21,7 @@ public class Main {
     void enterMenu () {
 
         int option = 0;
+        // Setting up menu option for user
         System.out.println("1. Save a contact");
         System.out.println("2. Search a contact");
         System.out.println("3. Exit");
@@ -31,10 +35,13 @@ public class Main {
                 case 1:
                     System.out.println("Name:");
                     String name = scanner.nextLine();
+                    // Using the setter method to get contact name
                     contact.setName(name);
                     System.out.println("Phone Number:");
                     String phoneNumber = scanner.nextLine();
+                    // Using the setter method to get contact phoneNumber.
                     contact.setPhoneNumber(phoneNumber);
+                    // Storing the name and phoneNumber in a HashMap.
                     contact.phoneBook.put(name, phoneNumber);
                     System.out.println("Contact added successfully!");
                     System.out.println();
@@ -43,6 +50,7 @@ public class Main {
                 case 2:
                     System.out.println("Enter name:");
                     String search = scanner.nextLine();
+                    // Looping through the HashMap to search for a contact name
                     for (String i : contact.phoneBook.keySet()) {
                         if (Objects.equals(i, search)) {
                             System.out.println("Name and Number exists!");
